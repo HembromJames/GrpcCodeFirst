@@ -1,0 +1,16 @@
+﻿@page "/consumer"
+<h3>Consumer</h3>
+<EditForm Model="name" OnValidSubmit="Submit">
+    <ValidationSummary/>
+    <div class="form-group row">
+        <label for="firstName" class="col-sm-2 col-form-label">
+            Name
+        </label>
+        <div class="col-sm-10">
+            <InputText id="firstName" class="form-control" placeholder="First Name"
+                       @bind-Value="name" />
+            <ValidationMessage For="@(() => name)" />
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+</EditForm>
